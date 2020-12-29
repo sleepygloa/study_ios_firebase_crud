@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirebaseScratch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuo-Me-gxD">
+                                <rect key="frame" x="181" y="91" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68W-DS-mQr">
+                                <rect key="frame" x="117" y="147" width="165" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="create customers">
+                                    <color key="titleColor" red="1" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createCustomers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7b-W5-iJo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qx2-Dj-iNM">
+                                <rect key="frame" x="123" y="219" width="154" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="fetch customers">
+                                    <color key="titleColor" red="1" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchCustomers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U71-F1-aLU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-jc-1sx">
+                                <rect key="frame" x="114" y="291" width="172" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="update customers">
+                                    <color key="titleColor" red="1" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateCustomers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkR-pi-IUO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNs-rc-DHd">
+                                <rect key="frame" x="117" y="358" width="164" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="delete customers">
+                                    <color key="titleColor" red="1" green="0.1333333333" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteCustomers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YvB-P3-fqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qx2-Dj-iNM" firstAttribute="centerX" secondItem="68W-DS-mQr" secondAttribute="centerX" id="79D-S5-sKG"/>
+                            <constraint firstItem="68W-DS-mQr" firstAttribute="top" secondItem="Wuo-Me-gxD" secondAttribute="bottom" constant="174.5" id="8b1-9h-vVC"/>
+                            <constraint firstItem="68W-DS-mQr" firstAttribute="centerX" secondItem="Wuo-Me-gxD" secondAttribute="centerX" id="AO9-uy-dcs"/>
+                            <constraint firstItem="mNs-rc-DHd" firstAttribute="top" secondItem="nIJ-jc-1sx" secondAttribute="bottom" constant="49" id="AfB-tS-gAx"/>
+                            <constraint firstItem="mNs-rc-DHd" firstAttribute="centerX" secondItem="nIJ-jc-1sx" secondAttribute="centerX" id="HMb-Cr-f01"/>
+                            <constraint firstItem="qx2-Dj-iNM" firstAttribute="top" secondItem="68W-DS-mQr" secondAttribute="bottom" constant="64" id="PAk-ic-VIy"/>
+                            <constraint firstItem="Wuo-Me-gxD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="UZg-nV-Zeq"/>
+                            <constraint firstItem="nIJ-jc-1sx" firstAttribute="centerX" secondItem="qx2-Dj-iNM" secondAttribute="centerX" id="knC-D2-hED"/>
+                            <constraint firstItem="Wuo-Me-gxD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="t3e-Bu-eea"/>
+                            <constraint firstItem="nIJ-jc-1sx" firstAttribute="top" secondItem="qx2-Dj-iNM" secondAttribute="bottom" constant="72" id="wa2-6w-cVR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstDataLabel" destination="Wuo-Me-gxD" id="V9r-aF-8uq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </scene>
     </scenes>
 </document>
